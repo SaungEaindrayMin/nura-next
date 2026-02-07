@@ -1,17 +1,40 @@
-# React + Vite
+ONENEX
+- A modern frontend web application built with React 19 and Vite, focused on smooth animations, scalable architecture, and high-performance visuals using Framer Motion and Three.js.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Tech Stack Overview
+1. React 19 – Modern UI library for building component-based interfaces
+2. Vite – Fast development server and optimized build tool
+3. Tailwind CSS – Utility-first CSS framework for rapid UI development
+4. Framer Motion – Advanced animations and transitions
+5. React Router DOM – Client-side routing
+6. TanStack React Query – Data fetching, caching, and synchronization
+7. Axios – HTTP client for API communication
+8. Three.js + React Three Fiber/Drei – 3D graphics and WebGL rendering (which is use in service page's hero section)
+9. ESLint – Code quality and linting
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+Installation
+- Make sure you have the following installed - Node.js (v18 or later recommended) / npm or yarn. You can check node version by using this command (node -v).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+Install Dependencies
+- Clone the repository and install dependencies:
+- [git clone https://github.com/SaungEaindrayMin/technical-assessment.git]
+- cd nura-next
+- npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# nura-next
+
+Running the Project Locally
+- npm run dev
+- The app will be available at (http://localhost:5173)
+
+
+Key Technical Decisions
+- Vite was chosen for its extremely fast startup time, instant HMR, and optimized production bundles.
+- React 19 is used to stay future-proof and take advantage of modern React patterns and performance improvements.
+- Tailwind CSS enables a consistent design system, rapid UI iteration, and full responsiveness.
+- Framer Motion was selected for animations because it integrates natively with React and provides smooth page transitions and UI micro-interactions.
+- TanStack React Query simplifies server-state management by handling caching, background updates, and error states efficiently.
+- Three.js with React Three Fiber is used to create declarative 3D scenes within React, specifically implemented in the Service page hero section.
+- ESLint ensures consistent code quality and helps prevent common bugs during development.

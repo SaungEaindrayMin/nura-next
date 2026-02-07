@@ -41,7 +41,6 @@ const ServiceLatest = () => {
                 transition={{ delay: i * 0.15, duration: 0.6 }}
                 className="group bg-white rounded-xs overflow-hidden flex flex-col h-full border border-white"
               >
-
                 <div className="relative h-64 overflow-hidden bg-gray-200">
                   <img
                     src={
@@ -64,7 +63,9 @@ const ServiceLatest = () => {
 
                 <div className="p-8 flex flex-col flex-grow">
                   <h3 className="text-[#00C4CC] text-xl font-bold uppercase mb-4 flex items-center gap-2">
-                    <span className="transform text-black font-light text-3xl -rotate-90">↗</span>
+                    <span className="transform text-black font-light text-3xl -rotate-90">
+                      ↗
+                    </span>
                     {movie.title}
                   </h3>
 

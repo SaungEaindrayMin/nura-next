@@ -3,11 +3,9 @@ import HeroTunnel from "../../ui/HeroTunnel";
 
 const ServiceHero = () => {
   return (
-<section className="relative min-h-screen flex items-center justify-center pt-24 font-grotesk">
-      {/* 3D Background */}
+    <section className="relative min-h-screen flex items-center justify-center pt-24 font-grotesk">
       <HeroTunnel />
 
-      {/* Text */}
       <div className="relative z-10 text-center px-4">
         <motion.h1
           initial={{ opacity: 0, y: 24 }}

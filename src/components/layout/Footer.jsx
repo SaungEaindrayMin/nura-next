@@ -13,7 +13,6 @@ import { useLocation } from "react-router-dom";
 const Footer = () => {
   const location = useLocation();
 
-  // ✅ Only CASES uses dark footer
   const isCasesPage = location.pathname === "/cases";
 
   const socialIcons = [
@@ -30,7 +29,6 @@ const Footer = () => {
       }`}
     >
       <div className="container-custom">
-        {/* TOP */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -61,7 +59,6 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        {/* LINKS */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -141,7 +138,6 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        {/* BOTTOM */}
         <div
           className={`border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 ${
             isCasesPage ? "border-white" : "border-accent-blue"

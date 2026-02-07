@@ -17,7 +17,6 @@ function Tunnel() {
 
     const pts = [];
 
-    // rounded rectangle path
     const steps = 32;
     for (let a = 0; a <= Math.PI * 2; a += Math.PI / steps) {
       const x = Math.cos(a);

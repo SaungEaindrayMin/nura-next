@@ -24,10 +24,6 @@ export function LoadingSpinner({ size = 'md', className, ...props }) {
     );
 }
 
-/**
- * Skeleton Loading State
- * Generic placeholder with shimmer effect
- */
 export function Skeleton({ className, ...props }) {
     return (
         <div
@@ -40,9 +36,6 @@ export function Skeleton({ className, ...props }) {
     );
 }
 
-/**
- * Full Page Loading Overlay
- */
 export function LoadingOverlay({ message = "Loading..." }) {
     return (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background/80 backdrop-blur-sm">

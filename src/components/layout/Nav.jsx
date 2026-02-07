@@ -27,7 +27,6 @@ const Nav = () => {
 
   const linkBaseClass = "text-sm font-semibold uppercase transition-opacity";
 
-  // Header background and text color based on page
   const headerStyle =
     mode === "contact"
       ? "bg-white text-accent-blue"
@@ -88,7 +87,6 @@ const Nav = () => {
             onenex
           </Link>
 
-          {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-12">
             {NAV_ITEMS.map(({ name, path }) => (
               <Link
@@ -122,7 +120,6 @@ const Nav = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div
           className={`md:hidden ${

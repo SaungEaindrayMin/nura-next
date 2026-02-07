@@ -4,33 +4,29 @@
 
 @layer base {
   :root {
-    /* Core Colors - mapped from existing tailwind.config.js */
-    --primary: 259 100% 65%; /* #6B4FFF - Converted to HSL for opacity manipulation */
-    --primary-light: 259 100% 71%; /* #8B6FFF */
-    --primary-dark: 259 100% 59%; /* #4B2FFF */
+    --primary: 259 100% 65%;
+    --primary-light: 259 100% 71%;
+    --primary-dark: 259 100% 59%;
 
-    --secondary: 43 33% 94%; /* #F5F1E8 - Beige */
-    --secondary-light: 0 0% 100%; /* #FFFFFF */
-    --secondary-dark: 43 20% 87%; /* #E5E1D8 */
+    --secondary: 43 33% 94%;
+    --secondary-light: 0 0% 100%;
+    --secondary-dark: 43 20% 87%;
 
-    /* Abstracted Theme Layers */
-    --background: 0 0% 100%; /* White */
-    --surface: 43 33% 94%; /* Match Secondary/Beige for cards/surfaces? Or stick to white/gray */
+    --background: 0 0% 100%;
+    --surface: 43 33% 94%;
     --surface-muted: 210 40% 96.1%;
 
-    --text-main: 222 47% 11%; /* #0F172A - Deep Slate */
-    --text-muted: 215 16% 47%; /* #64748B - Slate 500 */
+    --text-main: 222 47% 11%;
+    --text-muted: 215 16% 47%;
     --text-inverted: 0 0% 100%;
 
-    --border: 214 32% 91%; /* Slate 200 */
+    --border: 214 32% 91%;
     --border-strong: 214 32% 80%;
 
-    /* Accents */
-    --accent-yellow: 56 100% 65%; /* #FFF44F */
-    --accent-green: 82 85% 67%; /* #BEF264 */
-    --accent-blue: 213 100% 65%; /* #4F9FFF */
+    --accent-yellow: 56 100% 65%;
+    --accent-green: 82 85% 67%;
+    --accent-blue: 213 100% 65%;
 
-    /* Spacing & Radius */
     --radius-sm: 0.25rem;
     --radius-md: 0.5rem;
     --radius-lg: 0.75rem;
@@ -92,27 +88,6 @@
     font-style: normal;
   }
 
-  @font-face {
-    font-family: "Open Sans";
-    src: url("./assets/fonts/OpenSans-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Open Sans";
-    src: url("./assets/fonts/OpenSans-SemiBold.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Open Sans";
-    src: url("./assets/fonts/OpenSans-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-  }
-
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -128,23 +103,4 @@
   .container-custom {
     @apply max-w-7xl mx-auto px-6 lg:px-8;
   }
-}
-
-.cut-corner {
-  position: relative;
-  border-radius: 24px;
-  overflow: hidden;
-}
-
-.cut-corner::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 90px;
-  height: 90px;
-  background: inherit; /* shows page background */
-  clip-path: polygon(100% 0, 0 0, 100% 100%);
-  z-index: 20;
-  pointer-events: none;
 }
