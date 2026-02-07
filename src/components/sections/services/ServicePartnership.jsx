@@ -1,19 +1,8 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const ServicePartnership = () => {
   const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-
-  // Transition from Cyan (previous section) to White/Lavender to Purple
-  const backgroundColor = useTransform(
-    scrollYProgress,
-    [0.2, 0.8],
-    ["#FFFFFF", "#6D5CFF"],
-  );
 
   return (
     <motion.section
@@ -21,13 +10,12 @@ const ServicePartnership = () => {
       className="relative py-24 px-6 md:px-12 font-grotesk overflow-hidden"
     >
       <div className="container-custom mx-auto space-y-32">
-        {/* Section 1: Long Haul */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold uppercase leading-tight text-black"
+            className="text-3xl md:text-5xl font-medium uppercase leading-tight tracking-wide text-black"
           >
             We are with you for <br />
             the long haul
@@ -39,7 +27,7 @@ const ServicePartnership = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-black/80 font-light leading-relaxed"
+              className="text-lg md:text-lg text-black font-medium leading-relaxed"
             >
               As you scale, launch your products, and go into new markets, we
               continue to support your business and get people excited all over
@@ -52,23 +40,22 @@ const ServicePartnership = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
             >
-              <h3 className="text-5xl md:text-7xl font-bold text-[#6D5CFF] mb-2">
+              <h3 className="text-3xl md:text-5xl font-semibold text-primary mb-2">
                 2.3 YEARS
               </h3>
-              <p className="text-black/70 font-medium">
+              <p className="text-lg md:text-lg text-black font-medium leading-relaxed">
                 Industry average length of client – onenex relationship
               </p>
             </motion.div>
           </div>
         </div>
 
-        {/* Section 2: Launch */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold uppercase leading-tight text-black"
+            className="text-3xl md:text-5xl font-medium uppercase leading-tight tracking-wide text-black"
           >
             We know what it takes <br />
             to launch
@@ -80,7 +67,7 @@ const ServicePartnership = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-black/80 font-light leading-relaxed space-y-4"
+              className="text-lg md:text-lg text-black font-medium leading-relaxed"
             >
               <p>We have launched hundreds of products across categories.</p>
               <p>We have seen it all, done it all.</p>
@@ -93,10 +80,12 @@ const ServicePartnership = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
               >
-                <h3 className="text-4xl md:text-5xl font-bold text-[#6D5CFF] mb-2">
+                <h3 className="text-4xl md:text-5xl font-semibold text-primary mb-2">
                   30
                 </h3>
-                <p className="text-black/70 font-medium">Industries Sector</p>
+                <p className="text-lg md:text-lg text-black font-medium leading-relaxed">
+                  Industries Sector
+                </p>
               </motion.div>
 
               <motion.div
@@ -105,21 +94,22 @@ const ServicePartnership = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
               >
-                <h3 className="text-4xl md:text-5xl font-bold text-[#6D5CFF] mb-2">
+                <h3 className="text-4xl md:text-5xl font-semibold text-primary mb-2">
                   150+
                 </h3>
-                <p className="text-black/70 font-medium">Product Launch</p>
+                <p className="text-lg md:text-lg text-black font-medium leading-relaxed">
+                  Product Launch
+                </p>
               </motion.div>
             </div>
           </div>
         </div>
 
-        {/* Section 3: Extension of team */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-4xl mx-auto pt-16"
+          className="text-center  pt-16"
         >
           <h2 className="text-3xl md:text-5xl font-medium uppercase leading-tight text-white mb-12">
             We're an extension of your team. One goal, one team and one big
@@ -132,12 +122,10 @@ const ServicePartnership = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <h3 className="text-6xl md:text-8xl font-bold text-[#0FFFFF] mb-4">
+            <h3 className="text-4xl md:text-6xl font-bold text-[#00CFE7] mb-4">
               70+
             </h3>
-            <p className="text-white/90 text-xl font-medium uppercase tracking-widest">
-              Team Members
-            </p>
+            <p className="text-white text-xl font-medium  ">Team Members</p>
           </motion.div>
         </motion.div>
       </div>

@@ -9,6 +9,7 @@ import ServiceList from "../../components/sections/services/ServiceList";
 import SlideSections from "../../components/ui/SlideSections";
 import GetInTouch from "../../components/sections/cases/GetInTouch";
 import Footer from "../../components/layout/Footer";
+import ServiceLatest from "../../components/sections/services/ServiceLatest";
 
 const Services = () => {
   const [mounted, setMounted] = useState(false);
@@ -61,7 +62,7 @@ const Services = () => {
         <ServiceList />
       </div>
       <div ref={latestRef} className="relative z-10">
-        <ServiceList />
+        <ServiceLatest />
       </div>
 
       <div ref={slideSectionRef} className="relative z-10">
