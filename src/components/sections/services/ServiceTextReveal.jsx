@@ -4,11 +4,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const ServiceTextReveal = () => {
   const containerRef = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-
   const words = [
     "Every",
     "small",
@@ -70,27 +65,22 @@ const ServiceTextReveal = () => {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex items-center py-24 font-grotesk"
+      className="relative  flex items-center font-grotesk mb-24"
     >
-      {/* Gradient overlay REMOVED */}
-
-      <div
-        className="container-custom grid grid-cols-1 gap-y-24 items-start relative z-20"
-      >
-        {/* 🟢 LEFT COLUMN — PRIMARY TEXT */}
+      <div className="container-custom grid grid-cols-1 gap-y-52 items-start relative z-20">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           transition={{ staggerChildren: 0.05 }}
-          className="flex flex-wrap justify-start gap-x-3 gap-y-2 text-3xl md:text-4xl font-medium leading-tight text-accent-blue"
+          className="flex flex-wrap justify-start gap-x-3 gap-y-2 text-3xl md:text-5xl font-medium  leading-tight text-[#00CFE7]"
         >
           {words.map((word, i) => (
             <motion.span
               key={i}
               variants={{
                 hidden: { opacity: 0.2 },
-                visible: { opacity: 1 }
+                visible: { opacity: 1 },
               }}
               transition={{ duration: 0.4 }}
               className="inline-block"
@@ -100,20 +90,19 @@ const ServiceTextReveal = () => {
           ))}
         </motion.div>
 
-        {/* 🔵 RIGHT COLUMN — SECONDARY TEXT */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ staggerChildren: 0.05, delayChildren: 0.5 }} // Optional delay to start after or with first block
-          className="flex flex-wrap justify-end gap-x-3 gap-y-2 text-2xl md:text-4xl font-medium leading-relaxed text-right"
+          transition={{ staggerChildren: 0.05, delayChildren: 0.5 }}
+          className="flex flex-wrap justify-end gap-x-3 gap-y-2 text-2xl md:text-5xl font-medium  leading-relaxed text-right"
         >
           {subWords.map((word, i) => (
             <motion.span
               key={i}
               variants={{
                 hidden: { opacity: 0.2 },
-                visible: { opacity: 1 }
+                visible: { opacity: 1 },
               }}
               transition={{ duration: 0.4 }}
               className="text-primary inline-block"

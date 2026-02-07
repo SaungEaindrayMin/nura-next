@@ -129,3 +129,22 @@
     @apply max-w-7xl mx-auto px-6 lg:px-8;
   }
 }
+
+.cut-corner {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.cut-corner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+  background: inherit; /* shows page background */
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  z-index: 20;
+  pointer-events: none;
+}

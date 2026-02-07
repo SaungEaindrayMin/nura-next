@@ -48,7 +48,7 @@ const ServiceTransition = () => {
       ref={ref}
       className="container-custom  relative min-h-[100vh] flex items-center justify-center font-grotesk"
     >
-      <div className="grid grid-cols-2 items-end">
+      <div className="flex items-end">
         <div>
           <h2 className="text-secondary text-xl font-bold tracking-widest mb-8 uppercase">
             What Do We Do?

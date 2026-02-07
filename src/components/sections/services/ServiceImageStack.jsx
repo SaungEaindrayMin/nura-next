@@ -20,15 +20,19 @@ const Card = ({ i, title, subtitle, image, progress, range, targetScale }) => {
       <motion.div
         style={{
           scale,
-          backgroundColor: "#FFFFFF",
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className="relative flex flex-col w-[90vw] md:w-[70vw] h-[60vh] rounded-3xl overflow-hidden shadow-2xl origin-top"
+        className="relative flex flex-col w-[90vw] md:w-[70vw] h-[60vh] origin-top"
       >
-        <div className="absolute inset-0 z-0">
+        <div
+          className="
+    absolute inset-0 overflow-hidden  rounded-2xl
+    [clip-path:polygon(0%_0%,calc(100%-90px)_0%,100%_90px,100%_100%,0%_100%)]
+  "
+        >
           <motion.div
             style={{ scale: imageScale }}
-            className="w-full h-full bg-cover bg-center absolute inset-0 grayscale hover:grayscale-0 transition-all duration-500"
+            className="w-full h-full grayscale hover:grayscale-0 transition-all duration-500 "
           >
             {image ? (
               <img
@@ -40,19 +44,18 @@ const Card = ({ i, title, subtitle, image, progress, range, targetScale }) => {
               <div className="w-full h-full bg-gray-800" />
             )}
 
-            {/* Overlay for text readability */}
             <div className="absolute inset-0 bg-black/40 hover:bg-black/20 transition-colors duration-500" />
           </motion.div>
         </div>
 
         <div className="relative z-10 flex flex-col justify-between h-full p-8 md:p-12">
-          <div className="self-end">
-            <span className="text-white font-medium tracking-wider uppercase border-b border-white pb-1">
+          <div className="text-center">
+            <span className="text-white font-semibold text-2xl tracking-wider uppercase border-b border-white pb-1">
               {subtitle}
             </span>
           </div>
 
-          <h3 className="text-3xl md:text-5xl font-bold text-white uppercase text-center leading-tight drop-shadow-lg">
+          <h3 className="text-4xl md:text-6xl font-bold text-white uppercase text-center leading-tight drop-shadow-lg">
             {title}
           </h3>
 
@@ -72,12 +75,6 @@ const ServiceImageStack = () => {
 
   const { data: movies, isLoading } = useMovies(5);
 
-  const backgroundColor = useTransform(
-    scrollYProgress,
-    [0.2, 1],
-    ["#0FFFFF", "#FFFFFF"],
-  );
-
   if (isLoading) {
     return (
       <section className="min-h-screen flex items-center justify-center">
@@ -89,9 +86,7 @@ const ServiceImageStack = () => {
   }
 
   return (
-    <motion.section ref={containerRef} className="relative pb-24 font-grotesk">
-      {/* Gradient overlay REMOVED */}
-
+    <motion.section ref={containerRef} className="relative font-grotesk">
       {movies?.map((movie, i) => {
         const targetScale = 1 - (movies.length - i) * 0.05;
         return (
