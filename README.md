@@ -12,6 +12,7 @@ Tech Stack Overview
 7. Axios – HTTP client for API communication
 8. Three.js + React Three Fiber/Drei – 3D graphics and WebGL rendering (which is use in service page's hero section)
 9. ESLint – Code quality and linting
+10. Email.js - for email services
 
 
 Installation
