@@ -24,11 +24,11 @@ const Footer = () => {
 
   return (
     <footer
-      className={`py-36 font-grotesk transition-colors duration-300 ${
+      className={` ${
         isCasesPage ? "bg-primary text-white" : "bg-white text-accent-blue"
       }`}
     >
-      <div className="container-custom">
+      <div className="container-custom min-h-screen flex flex-col justify-center w-full font-grotesk transition-colors duration-300">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

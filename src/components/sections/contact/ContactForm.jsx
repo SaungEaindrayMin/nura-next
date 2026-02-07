@@ -62,12 +62,8 @@ const ContactForm = () => {
     <section className="py-20 min-h-screen bg-white font-grotesk">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          {/* Left Content */}
+          <motion.div  initial="hidden" animate="visible">
             <h2 className="text-4xl lg:text-5xl font-semibold text-accent-blue tracking-wider">
               We&apos;re ready if you
               <br />
@@ -75,11 +71,11 @@ const ContactForm = () => {
             </h2>
           </motion.div>
 
+          {/* Form */}
           <motion.form
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+ 
+            initial="hidden"
+            animate="visible"
             onSubmit={handleSubmit}
             className="space-y-6"
           >
@@ -110,11 +106,7 @@ const ContactForm = () => {
               <motion.div
                 className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-primary rounded-full"
                 animate={{ scale: [1, 1.2, 1], opacity: [0.7, 1, 0.7] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+                transition={{ duration: 2, repeat: Infinity }}
               />
             </div>
 
@@ -154,6 +146,7 @@ const ContactForm = () => {
               text-gray-800 placeholder-gray-500"
             />
 
+            {/* Submit */}
             <div className="flex flex-col items-end pt-6 gap-3">
               <MotionButton
                 type="submit"

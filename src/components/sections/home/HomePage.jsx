@@ -60,18 +60,7 @@ const HomePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25 }}
         >
-          <Button
-            variant="outline"
-            size="sm"
-            icon={<ArrowRight size={16} />}
-            className="
-              border-white/70
-              text-white
-              hover:bg-white
-              hover:text-[#083A8C]
-              transition-all
-            "
-          >
+          <Button variant="secondary" size="sm" icon={<ArrowRight size={16} />}>
             GET IN TOUCH
           </Button>
         </motion.div>

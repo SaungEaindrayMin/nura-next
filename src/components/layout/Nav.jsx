@@ -124,7 +124,7 @@ const Nav = () => {
         <div
           className={`md:hidden ${
             mode === "contact"
-              ? "bg-secondary text-accent-blue"
+              ? "bg-white text-accent-blue"
               : mode === "services"
                 ? "bg-black text-[#00E3FE]"
                 : mode === "home"

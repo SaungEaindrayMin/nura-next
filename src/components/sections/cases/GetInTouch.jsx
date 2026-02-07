@@ -37,14 +37,9 @@ const GetInTouch = ({ serviceMode = false }) => {
         </motion.h1>
 
         <Button
-          variant="outline"
+          variant={serviceMode ? "secondary" : "outline"}
           size="sm"
           icon={<ArrowRight size={18} />}
-          className={
-            serviceMode
-              ? "border-white text-white hover:bg-white hover:text-black hover:border-white"
-              : ""
-          }
         >
           GET IN TOUCH
         </Button>
