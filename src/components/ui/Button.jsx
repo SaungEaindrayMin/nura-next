@@ -18,7 +18,7 @@ export const Button = ({
     outline:
       "border border-primary text-primary hover:bg-primary hover:text-white",
     third:
-      "border border-third text-third hover:bg-third hover:text-third",
+      "border border-accent-blue text-accent-blue hover:bg-accent-blue hover:text-white",
   };
 
   const sizes = {

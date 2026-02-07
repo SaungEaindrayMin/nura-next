@@ -1,19 +1,13 @@
 import Footer from "../../components/layout/Footer";
-import CaseStudies from "../../components/sections/cases/CaseStudies";
-import GetInTouch from "../../components/sections/cases/GetInTouch";
-import Hero from "../../components/sections/cases/Hero";
+import HomePage from "../../components/sections/home/HomePage";
 import SlideSections from "../../components/ui/SlideSections";
-
 
 const Home = () => {
   return (
     <>
-      <Hero />
-      <CaseStudies />
-
-      <SlideSections>
-        {[<GetInTouch key="g" />, <Footer key="f" />]}
-      </SlideSections>
+        <SlideSections>
+          {[<HomePage key="g" />, <Footer key="f" />]}
+        </SlideSections>
     </>
   );
 };

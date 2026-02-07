@@ -4,7 +4,6 @@ import GetInTouch from "../../components/sections/cases/GetInTouch";
 import Hero from "../../components/sections/cases/Hero";
 import SlideSections from "../../components/ui/SlideSections";
 
-
 const Cases = () => {
   return (
     <>

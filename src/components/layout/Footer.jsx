@@ -12,7 +12,9 @@ import { useLocation } from "react-router-dom";
 
 const Footer = () => {
   const location = useLocation();
-  const isServicesPage = location.pathname === "/services";
+
+  // ✅ Only CASES uses dark footer
+  const isCasesPage = location.pathname === "/cases";
 
   const socialIcons = [
     { Icon: Facebook, link: SOCIAL_LINKS.FACEBOOK },
@@ -24,12 +26,11 @@ const Footer = () => {
   return (
     <footer
       className={`py-36 font-grotesk transition-colors duration-300 ${
-        isServicesPage
-          ? "bg-white text-black"
-          : "bg-gradient-to-br from-primary to-primary-light text-white"
+        isCasesPage ? "bg-primary text-white" : "bg-white text-accent-blue"
       }`}
     >
       <div className="container-custom">
+        {/* TOP */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +52,7 @@ const Footer = () => {
             transition={{ delay: 0.2 }}
           >
             <Button
-              variant={isServicesPage ? "primary" : "secondary"}
+              variant={isCasesPage ? "secondary" : "third"}
               size="sm"
               icon={<ArrowRight size={20} />}
             >
@@ -60,17 +61,21 @@ const Footer = () => {
           </motion.div>
         </div>
 
+        {/* LINKS */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
           >
             <h3 className="font-medium text-xl tracking-wide mb-4">
               WE ONENEX
             </h3>
-            <ul className="space-y-2 font-medium text-lg">
+            <ul
+              className={`space-y-2 font-medium text-lg ${
+                isCasesPage ? "text-white" : "text-black"
+              }`}
+            >
               <li>
                 <a href="/cases" className="hover:underline">
                   Cases
@@ -93,10 +98,14 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.2 }}
           >
             <h3 className="font-medium text-xl tracking-wide mb-4">WE OFFER</h3>
-            <ul className="space-y-2 font-medium text-lg">
+            <ul
+              className={`space-y-2 font-medium text-lg ${
+                isCasesPage ? "text-white" : "text-black"
+              }`}
+            >
               {SERVICES.map((service) => (
                 <li key={service}>{service}</li>
               ))}
@@ -107,12 +116,12 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.4 }}
           >
             <h3 className="font-medium text-xl tracking-wide mb-4">
               FOLLOW US
             </h3>
-            <div className="flex gap-2 font-medium text-lg">
+            <div className="flex gap-2">
               {socialIcons.map(({ Icon, link }, index) => (
                 <a
                   key={index}
@@ -120,9 +129,9 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                    isServicesPage
-                      ? "bg-black text-white hover:bg-black/80"
-                      : "bg-white text-primary hover:bg-white/30"
+                    isCasesPage
+                      ? "bg-white text-primary hover:bg-white/80"
+                      : "bg-accent-blue text-white hover:bg-accent-blue/80"
                   }`}
                 >
                   <Icon size={20} />
@@ -132,9 +141,10 @@ const Footer = () => {
           </motion.div>
         </div>
 
+        {/* BOTTOM */}
         <div
           className={`border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 ${
-            isServicesPage ? "border-black" : "border-white"
+            isCasesPage ? "border-white" : "border-accent-blue"
           }`}
         >
           <p className="text-4xl font-medium">onenex</p>

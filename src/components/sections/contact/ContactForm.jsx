@@ -24,11 +24,10 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // Add your form submission logic here
   };
 
   return (
-    <section className="py-20 bg-secondary font-grotesk">
+    <section className="py-20 min-h-screen  bg-white font-grotesk">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <motion.div
@@ -37,7 +36,7 @@ const ContactForm = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl lg:text-5xl font-semibold text-primary tracking-wider">
+            <h2 className="text-4xl lg:text-5xl font-semibold text-accent-blue tracking-wider">
               We&apos;re ready if you
               <br />
               are. Let&apos;s get to it
@@ -60,7 +59,7 @@ const ContactForm = () => {
               placeholder="Name"
               required
               className="w-full px-0 py-3 bg-transparent border-b-2 border-gray-300 
-              focus:border-primary outline-none transition-colors
+              focus:border-accent-blue outline-none transition-colors
               text-gray-800 placeholder-gray-500"
             />
 
@@ -72,7 +71,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 placeholder="Business (OPTIONAL)"
                 className="w-full px-0 py-3 bg-transparent border-b-2 border-gray-300 
-                focus:border-primary outline-none transition-colors
+                focus:border-accent-blue outline-none transition-colors
                 text-gray-800 placeholder-gray-500"
               />
 
@@ -98,7 +97,7 @@ const ContactForm = () => {
               placeholder="Phone"
               required
               className="w-full px-0 py-3 bg-transparent border-b-2 border-gray-300 
-              focus:border-primary outline-none transition-colors
+              focus:border-accent-blue outline-none transition-colors
               text-gray-800 placeholder-gray-500"
             />
 
@@ -110,7 +109,7 @@ const ContactForm = () => {
               placeholder="Email"
               required
               className="w-full px-0 py-3 bg-transparent border-b-2 border-gray-300 
-              focus:border-primary outline-none transition-colors
+              focus:border-accent-blue outline-none transition-colors
               text-gray-800 placeholder-gray-500"
             />
 
@@ -121,7 +120,7 @@ const ContactForm = () => {
               placeholder="Tell us about your project"
               rows={1}
               className="w-full px-0 py-3 bg-transparent border-b-2 border-gray-300 
-              focus:border-primary outline-none transition-colors resize-none
+              focus:border-accent-blue outline-none transition-colors resize-none
               text-gray-800 placeholder-gray-500"
             />
 
@@ -129,7 +128,7 @@ const ContactForm = () => {
             <div className="flex justify-end pt-6">
               <MotionButton
                 type="submit"
-                variant="outline"
+                variant="third"
                 size="sm"
                 whileHover={{ scale: 1.05, x: 5 }}
                 whileTap={{ scale: 0.95 }}

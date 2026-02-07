@@ -5,7 +5,7 @@ const SlideSections = ({ children }) => {
   const index = useSlideScroll(children.length);
 
   return (
-    <div className="relative h-[200vh]">
+    <div className="relative ">
       <div className="sticky top-0 h-screen overflow-hidden">
         {children.map((child, i) => (
           <motion.div
